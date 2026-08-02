@@ -1,0 +1,11 @@
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\bin\Release\ScreenCrosshair.exe.config
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\bin\Release\ScreenCrosshair.exe
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\bin\Release\ScreenCrosshair.pdb
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.csproj.AssemblyReference.cache
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.CrosshairScreen.resources
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.Properties.Resources.resources
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.csproj.GenerateResource.cache
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.csproj.CoreCompileInputs.cache
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.exe
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.pdb
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Release\ScreenCrosshair.SettingsForm.resources
