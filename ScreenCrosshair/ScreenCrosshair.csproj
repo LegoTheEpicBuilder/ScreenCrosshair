@@ -49,10 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrosshairDrawing.cs" />
+    <Compile Include="Crosshair\Crosshair.cs" />
+    <Compile Include="Crosshair\HollowCircleCrosshair.cs" />
+    <Compile Include="Crosshair\StandardCrosshair.cs" />
     <Compile Include="CrosshairScreen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Crosshair\CrosshairManager.cs" />
     <Compile Include="KeybindManager\ButtonClickedEventArgs.cs" />
     <Compile Include="KeybindManager\Keybind.cs" />
     <Compile Include="KeybindManager\KeybindButton.cs" />
@@ -60,6 +63,8 @@
     <Compile Include="KeybindManager\KeybindEditFailedEventArgs.cs" />
     <Compile Include="KeybindManager\KeybindsManager.cs" />
     <Compile Include="KeybindManager\KeyPressedEventArgs.cs" />
+    <Compile Include="ModelBaseClass.cs" />
+    <Compile Include="PresenterBaseClass.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>

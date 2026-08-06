@@ -81,11 +81,6 @@ namespace ScreenCrosshair
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void Settings_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SaveKeybind(string functionName, Action<Keys> saveAction)
         {
             if (CrosshairScreen.KeybindsManager.GetKeybindFromKeyFunction(functionName) is Keybind keybind)
@@ -106,6 +101,11 @@ namespace ScreenCrosshair
             //Settings.Default.RefreshesPerSecond = CrosshairScreen.ActiveCrosshairScreen.RefreshesPerSecond;
 
             Settings.Default.Save();
+        }
+
+        private void CrosshairSizeNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            CrosshairScreen.ActiveCrosshairScreen.CrosshairSize = (int)CrosshairSizeNumericBox.Value;
         }
     }
 }

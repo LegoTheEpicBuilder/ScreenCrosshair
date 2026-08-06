@@ -46,7 +46,10 @@
             this.ResetPositioningKeybindButton = new System.Windows.Forms.Button();
             this.ResetKeybindsButton = new System.Windows.Forms.Button();
             this.SaveKeybindsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CrosshairSizeNumericBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshesPerSecondNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CrosshairSizeNumericBox)).BeginInit();
             this.SuspendLayout();
             // 
             // RefreshesPerSecondNumericBox
@@ -240,11 +243,47 @@
             this.SaveKeybindsButton.UseVisualStyleBackColor = true;
             this.SaveKeybindsButton.Click += new System.EventHandler(this.SaveKeybindsButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 25);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Size";
+            // 
+            // CrosshairSizeNumericBox
+            // 
+            this.CrosshairSizeNumericBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrosshairSizeNumericBox.Location = new System.Drawing.Point(301, 115);
+            this.CrosshairSizeNumericBox.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.CrosshairSizeNumericBox.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.CrosshairSizeNumericBox.Name = "CrosshairSizeNumericBox";
+            this.CrosshairSizeNumericBox.Size = new System.Drawing.Size(110, 31);
+            this.CrosshairSizeNumericBox.TabIndex = 17;
+            this.CrosshairSizeNumericBox.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.CrosshairSizeNumericBox.ValueChanged += new System.EventHandler(this.CrosshairSizeNumericBox_ValueChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 299);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CrosshairSizeNumericBox);
             this.Controls.Add(this.SaveKeybindsButton);
             this.Controls.Add(this.ResetKeybindsButton);
             this.Controls.Add(this.ResetPositioningKeybindButton);
@@ -265,8 +304,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
             this.Text = "Settings";
-            this.Load += new System.EventHandler(this.Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RefreshesPerSecondNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CrosshairSizeNumericBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +330,7 @@
         private System.Windows.Forms.Button ResetPositioningKeybindButton;
         private System.Windows.Forms.Button ResetKeybindsButton;
         private System.Windows.Forms.Button SaveKeybindsButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown CrosshairSizeNumericBox;
     }
 }

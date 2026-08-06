@@ -106,5 +106,17 @@ namespace ScreenCrosshair.Properties {
                 this["RefreshesPerSecond"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("16")]
+        public int CrosshairSize {
+            get {
+                return ((int)(this["CrosshairSize"]));
+            }
+            set {
+                this["CrosshairSize"] = value;
+            }
+        }
     }
 }

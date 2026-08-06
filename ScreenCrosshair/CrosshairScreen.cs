@@ -8,8 +8,7 @@ using System.Windows.Forms;
 using Utils;
 using System.Diagnostics;
 using Keybinds;
-using ScreenCrosshair.Properties;
-using ScreenCrosshair;
+using ScreenCrosshair.Crosshair;
 
 namespace ScreenCrosshair
 {
@@ -17,6 +16,7 @@ namespace ScreenCrosshair
     {
         public static CrosshairScreen ActiveCrosshairScreen { get; private set; }
         public static KeybindsManager KeybindsManager { get; private set; }
+        public static CrosshairManager CrosshairManager { get; private set; }
         public SettingsForm Settings { get; private set; }
 
         private int _refreshesPerSecond = Properties.Settings.Default.RefreshesPerSecond;
@@ -25,16 +25,31 @@ namespace ScreenCrosshair
             get { return _refreshesPerSecond; }
             set
             {
+                if (_refreshesPerSecond == value) { return; }
+
                 _refreshesPerSecond = value;
 
                 UpdateTimer.Interval = 1000 / _refreshesPerSecond;
             }
         }
 
+        private int _crosshairSize = Properties.Settings.Default.CrosshairSize;
+        public int CrosshairSize { 
+            get { return _crosshairSize; }
+            set
+            {
+                if (_crosshairSize == value) { return; }
+
+                _crosshairSize = value;
+
+                CrosshairManager.Size = _crosshairSize;
+            }
+        }
+
         private int _crosshairRepositionAmount = 2;
         private int _colorPickingSize = 30;
 
-        public CrosshairDrawing CrosshairDrawing { get; private set; }
+        public StandardCrosshair CrosshairDrawing { get; private set; }
         private Color _colorReversed;
         
         // Windows API Interop constants
@@ -80,7 +95,8 @@ namespace ScreenCrosshair
             KeybindsManager.RegisterAllKeybinds();
 
             //crosshair drawing initializing
-            CrosshairDrawing = new CrosshairDrawing();
+            CrosshairManager = new CrosshairManager();
+            CrosshairManager.Model = new StandardCrosshair();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -92,27 +108,27 @@ namespace ScreenCrosshair
 
         private void OnKeybindPressed(object sender, KeyPressedEventArgs e)
         {
-            Debug.WriteLine(CrosshairDrawing.DrawingPosition);
+            Debug.WriteLine(CrosshairManager.DrawingPosition);
 
             if (e.Keybind.KeyFunction.Equals("ResetCrosshairPosition")) 
             { 
-                CrosshairDrawing.ResetDrawingPosition();
+                CrosshairManager.ResetDrawingPosition();
             }
             else if (e.Keybind.KeyFunction.Equals("MoveUp")) 
             {
-                CrosshairDrawing.IncreaseDrawingPosition(new Point(0, -_crosshairRepositionAmount));
+                CrosshairManager.IncreaseDrawingPosition(new Point(0, -_crosshairRepositionAmount));
             }
             else if (e.Keybind.KeyFunction.Equals("MoveDown"))
             {
-                CrosshairDrawing.IncreaseDrawingPosition(new Point(0, _crosshairRepositionAmount));
+                CrosshairManager.IncreaseDrawingPosition(new Point(0, _crosshairRepositionAmount));
             }
             else if (e.Keybind.KeyFunction.Equals("MoveLeft"))
             {
-                CrosshairDrawing.IncreaseDrawingPosition(new Point(-_crosshairRepositionAmount, 0));
+                CrosshairManager.IncreaseDrawingPosition(new Point(-_crosshairRepositionAmount, 0));
             }
             else if (e.Keybind.KeyFunction.Equals("MoveRight"))
             {
-                CrosshairDrawing.IncreaseDrawingPosition(new Point(_crosshairRepositionAmount, 0));
+                CrosshairManager.IncreaseDrawingPosition(new Point(_crosshairRepositionAmount, 0));
             }
             else if (e.Keybind.KeyFunction.Equals("ToggleSettings")) 
             {
@@ -146,7 +162,7 @@ namespace ScreenCrosshair
 
         private void UpdateTimer_Tick(object sender, EventArgs e)
         {            
-            Color color = Utilities.GetAverageColorRaw(new Rectangle(CrosshairDrawing.DrawingPosition.X - _colorPickingSize / 2, CrosshairDrawing.DrawingPosition.Y - _colorPickingSize / 2, _colorPickingSize, _colorPickingSize));
+            Color color = Utilities.GetAverageColorRaw(new Rectangle(CrosshairManager.DrawingPosition.X - _colorPickingSize / 2, CrosshairManager.DrawingPosition.Y - _colorPickingSize / 2, _colorPickingSize, _colorPickingSize));
             _colorReversed = Utilities.GetReverseBlackOrWhite(color);
             //MessageBox.Show($"{color.ToString()}/n{colorReverse.ToString()}");
 
@@ -178,8 +194,8 @@ namespace ScreenCrosshair
 
         private void CrosshairScreen_Paint(object sender, PaintEventArgs e)
         {
-            CrosshairDrawing.ChangeColor(_colorReversed);
-            CrosshairDrawing.DrawCrosshair(e.Graphics);
+            CrosshairManager.ChangeColor(_colorReversed);
+            CrosshairManager.Draw(e.Graphics);
 
             //debugging
             //e.Graphics.DrawRectangle(Pens.Red, CrosshairDrawing.DrawingPosition.X - _colorPickingSize / 2, CrosshairDrawing.DrawingPosition.Y - _colorPickingSize / 2, _colorPickingSize, _colorPickingSize);
