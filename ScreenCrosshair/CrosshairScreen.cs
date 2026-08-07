@@ -96,7 +96,7 @@ namespace ScreenCrosshair
 
             //crosshair drawing initializing
             CrosshairManager = new CrosshairManager();
-            CrosshairManager.Model = new StandardCrosshair();
+            CrosshairManager.SetCrosshairByType((CrosshairType)Properties.Settings.Default.CrosshairType);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -228,13 +228,7 @@ namespace ScreenCrosshair
             // 
             this.ClientSize = new System.Drawing.Size(278, 244);
             this.Name = "CrosshairScreen";
-            this.Load += new System.EventHandler(this.CrosshairScreen_Load);
             this.ResumeLayout(false);
-
-        }
-
-        private void CrosshairScreen_Load(object sender, EventArgs e)
-        {
 
         }
     }

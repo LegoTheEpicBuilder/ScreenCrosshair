@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Crosshair\Crosshair.cs" />
+    <Compile Include="Crosshair\CrosshairType.cs" />
     <Compile Include="Crosshair\HollowCircleCrosshair.cs" />
     <Compile Include="Crosshair\StandardCrosshair.cs" />
     <Compile Include="CrosshairScreen.cs">

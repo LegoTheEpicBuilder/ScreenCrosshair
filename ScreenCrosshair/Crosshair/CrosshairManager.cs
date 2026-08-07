@@ -8,6 +8,7 @@ using Models;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ScreenCrosshair.Crosshair
 {
@@ -60,6 +61,14 @@ namespace ScreenCrosshair.Crosshair
         public void ResetDrawingPosition()
         {
             DrawingPosition = StartPosition;
+        }
+
+        public void SetCrosshairByType(CrosshairType crosshairType)
+        {
+            if (Model != null && crosshairType.Equals(Model.Type)) { return; }
+
+            if (crosshairType.Equals(CrosshairType.Standard)) { Model = new StandardCrosshair(); }
+            else if (crosshairType.Equals(CrosshairType.HollowCircle)) { Model = new HollowCircleCrosshair(); }
         }
     }
 }

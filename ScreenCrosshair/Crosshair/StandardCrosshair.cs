@@ -4,7 +4,8 @@ using System.Drawing.Drawing2D;
 namespace ScreenCrosshair.Crosshair
 {
     public class StandardCrosshair : Crosshair
-    {   
+    {
+        public override CrosshairType Type { get { return CrosshairType.Standard; } }
         public override void DrawCrosshair(Graphics graphics, Pen pen, Point drawingPosition, int size)
         {
             GraphicsPath graphicsPath = new GraphicsPath();

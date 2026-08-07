@@ -4,8 +4,8 @@ C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\bi
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.csproj.AssemblyReference.cache
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.CrosshairScreen.resources
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.Properties.Resources.resources
+C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.SettingsForm.resources
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.csproj.GenerateResource.cache
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.csproj.CoreCompileInputs.cache
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.exe
 C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.pdb
-C:\Users\Jules\Desktop\ \persoonlijk\Scripts\ScreenCrosshair\ScreenCrosshair\obj\Debug\ScreenCrosshair.SettingsForm.resources

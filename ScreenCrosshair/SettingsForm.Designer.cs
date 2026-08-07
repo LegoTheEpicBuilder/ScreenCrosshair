@@ -48,6 +48,10 @@
             this.SaveKeybindsButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.CrosshairSizeNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SaveSettingsButton = new System.Windows.Forms.Button();
+            this.ResetSettingsButton = new System.Windows.Forms.Button();
+            this.CrosshairTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshesPerSecondNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrosshairSizeNumericBox)).BeginInit();
             this.SuspendLayout();
@@ -277,11 +281,56 @@
             0});
             this.CrosshairSizeNumericBox.ValueChanged += new System.EventHandler(this.CrosshairSizeNumericBox_ValueChanged);
             // 
+            // SaveSettingsButton
+            // 
+            this.SaveSettingsButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveSettingsButton.Location = new System.Drawing.Point(12, 246);
+            this.SaveSettingsButton.Name = "SaveSettingsButton";
+            this.SaveSettingsButton.Size = new System.Drawing.Size(159, 41);
+            this.SaveSettingsButton.TabIndex = 20;
+            this.SaveSettingsButton.Text = "Save settings";
+            this.SaveSettingsButton.UseVisualStyleBackColor = true;
+            this.SaveSettingsButton.Click += new System.EventHandler(this.SaveSettingsButton_Click);
+            // 
+            // ResetSettingsButton
+            // 
+            this.ResetSettingsButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetSettingsButton.Location = new System.Drawing.Point(177, 246);
+            this.ResetSettingsButton.Name = "ResetSettingsButton";
+            this.ResetSettingsButton.Size = new System.Drawing.Size(168, 41);
+            this.ResetSettingsButton.TabIndex = 19;
+            this.ResetSettingsButton.Text = "Reset settings";
+            this.ResetSettingsButton.UseVisualStyleBackColor = true;
+            this.ResetSettingsButton.Click += new System.EventHandler(this.ResetSettingsButton_Click);
+            // 
+            // CrosshairTypeComboBox
+            // 
+            this.CrosshairTypeComboBox.FormattingEnabled = true;
+            this.CrosshairTypeComboBox.Location = new System.Drawing.Point(177, 177);
+            this.CrosshairTypeComboBox.Name = "CrosshairTypeComboBox";
+            this.CrosshairTypeComboBox.Size = new System.Drawing.Size(234, 28);
+            this.CrosshairTypeComboBox.TabIndex = 21;
+            this.CrosshairTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.CrosshairTypeComboBox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 25);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Crosshair type";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 299);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CrosshairTypeComboBox);
+            this.Controls.Add(this.SaveSettingsButton);
+            this.Controls.Add(this.ResetSettingsButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CrosshairSizeNumericBox);
             this.Controls.Add(this.SaveKeybindsButton);
@@ -332,5 +381,9 @@
         private System.Windows.Forms.Button SaveKeybindsButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown CrosshairSizeNumericBox;
+        private System.Windows.Forms.Button SaveSettingsButton;
+        private System.Windows.Forms.Button ResetSettingsButton;
+        private System.Windows.Forms.ComboBox CrosshairTypeComboBox;
+        private System.Windows.Forms.Label label3;
     }
 }

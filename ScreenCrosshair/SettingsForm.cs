@@ -1,9 +1,11 @@
 ﻿using Keybinds;
+using ScreenCrosshair.Crosshair;
 using ScreenCrosshair.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +16,8 @@ namespace ScreenCrosshair
 {
     public partial class SettingsForm : Form
     {
+        private bool _initializing;
+
         public SettingsForm()
         {
             InitializeComponent();
@@ -59,7 +63,13 @@ namespace ScreenCrosshair
         {
             base.OnLoad(e);
 
+            _initializing = true; //making sure events don't get raised when setting forms elements
+
+            CrosshairTypeComboBox.DataSource = Enum.GetValues(typeof(CrosshairType));
+
             RefreshesPerSecondNumericBox.Value = CrosshairScreen.ActiveCrosshairScreen.RefreshesPerSecond;
+            CrosshairSizeNumericBox.Value = CrosshairScreen.ActiveCrosshairScreen.CrosshairSize;
+            CrosshairTypeComboBox.SelectedItem = CrosshairScreen.CrosshairManager.Model.Type;
 
             foreach (Keybind keybind in CrosshairScreen.KeybindsManager.Keybinds)
             {
@@ -72,6 +82,8 @@ namespace ScreenCrosshair
                     else if (keybindButton.KeyFunction.Equals("MoveRight")) { keybindButton.Button = MoveRightKeybindButton; }
                 }
             }
+
+            _initializing = false;
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -106,6 +118,29 @@ namespace ScreenCrosshair
         private void CrosshairSizeNumericBox_ValueChanged(object sender, EventArgs e)
         {
             CrosshairScreen.ActiveCrosshairScreen.CrosshairSize = (int)CrosshairSizeNumericBox.Value;
+        }
+
+        private void SaveSettingsButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.RefreshesPerSecond = (int)RefreshesPerSecondNumericBox.Value;
+            Settings.Default.CrosshairSize = (int)CrosshairSizeNumericBox.Value;
+            Settings.Default.CrosshairType = (int)((CrosshairType)CrosshairTypeComboBox.SelectedIndex);
+
+            Settings.Default.Save();
+        }
+
+        private void ResetSettingsButton_Click(object sender, EventArgs e)
+        {
+            RefreshesPerSecondNumericBox.Value = 10;
+            CrosshairSizeNumericBox.Value = 16;
+            CrosshairTypeComboBox.SelectedItem = CrosshairType.Standard;
+        }
+
+        private void CrosshairTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_initializing) { return; }
+
+            CrosshairScreen.CrosshairManager.SetCrosshairByType((CrosshairType)CrosshairTypeComboBox.SelectedItem);
         }
     }
 }

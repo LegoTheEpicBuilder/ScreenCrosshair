@@ -7,6 +7,7 @@ namespace ScreenCrosshair.Crosshair
 {
     public class HollowCircleCrosshair : Crosshair
     {
+        public override CrosshairType Type { get { return CrosshairType.HollowCircle; } }
         public override void DrawCrosshair(Graphics graphics, Pen pen, Point drawingPosition, int size)
         {
             GraphicsPath graphicsPath = new GraphicsPath();
