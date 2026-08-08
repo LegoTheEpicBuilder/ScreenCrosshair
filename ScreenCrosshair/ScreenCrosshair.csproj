@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crosshair\CrossCrosshair.cs" />
     <Compile Include="Crosshair\Crosshair.cs" />
     <Compile Include="Crosshair\CrosshairType.cs" />
+    <Compile Include="Crosshair\DotCrosshair.cs" />
     <Compile Include="Crosshair\HollowCircleCrosshair.cs" />
     <Compile Include="Crosshair\StandardCrosshair.cs" />
     <Compile Include="CrosshairScreen.cs">

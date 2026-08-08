@@ -9,6 +9,8 @@ namespace ScreenCrosshair.Crosshair
     public enum CrosshairType
     {
         Standard,
-        HollowCircle
+        HollowCircle,
+        Cross,
+        Dot
     }
 }

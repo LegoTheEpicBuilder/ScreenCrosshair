@@ -15,6 +15,8 @@ namespace ScreenCrosshair.Crosshair
     public class CrosshairManager : PresenterBaseClass<Crosshair>
     {
         protected Pen _pen;
+        protected SolidBrush _brush;
+
         public Rectangle Bounds { get { return Screen.PrimaryScreen.Bounds; } }
         public Point StartPosition { get { return new Point(Bounds.Left + Bounds.Width / 2, Bounds.Top + Bounds.Height / 2); } }
         public Point DrawingPosition { get; protected set; }
@@ -32,6 +34,7 @@ namespace ScreenCrosshair.Crosshair
         public CrosshairManager()
         {
             _pen = new Pen(Color.Black);
+            _brush = new SolidBrush(Color.Black);
             DrawingPosition = StartPosition;
         }
 
@@ -47,11 +50,12 @@ namespace ScreenCrosshair.Crosshair
 
         public void Draw(Graphics graphics)
         {
-            Model.DrawCrosshair(graphics, _pen, DrawingPosition, Size);
+            Model.DrawCrosshair(graphics, _pen, _brush, DrawingPosition, Size);
         }
         public void ChangeColor(Color color)
         {
             _pen.Color = color;
+            _brush.Color = color;
         }
         public void IncreaseDrawingPosition(Point point)
         {
@@ -69,6 +73,8 @@ namespace ScreenCrosshair.Crosshair
 
             if (crosshairType.Equals(CrosshairType.Standard)) { Model = new StandardCrosshair(); }
             else if (crosshairType.Equals(CrosshairType.HollowCircle)) { Model = new HollowCircleCrosshair(); }
+            else if (crosshairType.Equals(CrosshairType.Cross)) { Model = new CrossCrosshair(); }
+            else if (crosshairType.Equals(CrosshairType.Dot)) { Model = new DotCrosshair(); }
         }
     }
 }

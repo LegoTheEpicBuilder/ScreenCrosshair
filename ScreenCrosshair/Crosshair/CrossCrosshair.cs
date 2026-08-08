@@ -1,17 +1,21 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ScreenCrosshair.Crosshair
 {
-    public class StandardCrosshair : Crosshair
+    public class CrossCrosshair : Crosshair
     {
-        public override CrosshairType Type { get { return CrosshairType.Standard; } }
+        public override CrosshairType Type { get { return CrosshairType.Cross; } }
+
         public override void DrawCrosshair(Graphics graphics, Pen pen, SolidBrush brush, Point drawingPosition, int size)
         {
             float lineLengthMultiplier = 0.75f;
 
-            graphics.DrawEllipse(pen, drawingPosition.X - size / 2, drawingPosition.Y - size / 2, size, size);
-            
             //horizontal
             graphics.DrawLine(pen, drawingPosition.X - size * lineLengthMultiplier, drawingPosition.Y, drawingPosition.X + size * lineLengthMultiplier, drawingPosition.Y);
             //vertical
