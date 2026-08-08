@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshairscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshairscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|c:\\users\\jules\\desktop\\\u00A0\\persoonlijk\\scripts\\screencrosshair\\screencrosshair\\crosshair\\crosshair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshair\\crosshair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshair\\standardcrosshair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshair\\standardcrosshair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|c:\\users\\jules\\desktop\\\u00A0\\persoonlijk\\scripts\\screencrosshair\\screencrosshair\\keybindmanager\\keybindsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\keybindmanager\\keybindsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshair\\crosshairmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshair\\crosshairmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshair\\standardcrosshair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshair\\standardcrosshair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshair\\crosshairtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,14 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshairscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshairscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\screencrosshair\\crosshairscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC44B8F9-B309-4A04-AC7F-5DA33D9738F6}|ScreenCrosshair\\ScreenCrosshair.csproj|solutionrelative:screencrosshair\\crosshairscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "KeybindsManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\KeybindManager\\KeybindsManager.cs",
+              "RelativeDocumentMoniker": "ScreenCrosshair\\KeybindManager\\KeybindsManager.cs",
+              "ToolTip": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\KeybindManager\\KeybindsManager.cs",
+              "RelativeToolTip": "ScreenCrosshair\\KeybindManager\\KeybindsManager.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAuwIEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T17:41:43.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Crosshair.cs",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\Crosshair\\Crosshair.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\Crosshair\\Crosshair.cs",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CrosshairManager.cs",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\Crosshair\\CrosshairManager.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\Crosshair\\CrosshairManager.cs",
@@ -67,11 +84,12 @@
               "RelativeToolTip": "ScreenCrosshair\\Crosshair\\CrosshairManager.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAswDQAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T17:44:34.97Z"
+              "WhenOpened": "2026-08-07T17:44:34.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CrosshairType.cs",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\Crosshair\\CrosshairType.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\Crosshair\\CrosshairType.cs",
@@ -83,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "StandardCrosshair.cs",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\Crosshair\\StandardCrosshair.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\Crosshair\\StandardCrosshair.cs",
@@ -95,49 +113,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "SettingsForm.cs",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\SettingsForm.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\SettingsForm.cs",
               "ToolTip": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\SettingsForm.cs",
               "RelativeToolTip": "ScreenCrosshair\\SettingsForm.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAIwIcAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAA7wG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T17:50:00.966Z"
+              "WhenOpened": "2026-08-07T17:50:00.966Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "SettingsForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\SettingsForm.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\SettingsForm.cs",
               "ToolTip": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\SettingsForm.cs [Design]",
               "RelativeToolTip": "ScreenCrosshair\\SettingsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T17:49:31.759Z"
+              "WhenOpened": "2026-08-07T17:49:31.759Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "CrosshairScreen.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\CrosshairScreen.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\CrosshairScreen.cs",
               "ToolTip": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\CrosshairScreen.cs [Design]",
               "RelativeToolTip": "ScreenCrosshair\\CrosshairScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T17:44:42.6Z"
+              "WhenOpened": "2026-08-07T17:44:42.6Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "CrosshairScreen.cs",
               "DocumentMoniker": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\CrosshairScreen.cs",
               "RelativeDocumentMoniker": "ScreenCrosshair\\CrosshairScreen.cs",
               "ToolTip": "C:\\Users\\Jules\\Desktop\\\u00A0\\persoonlijk\\Scripts\\ScreenCrosshair\\ScreenCrosshair\\CrosshairScreen.cs",
               "RelativeToolTip": "ScreenCrosshair\\CrosshairScreen.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAkwGQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAIwGQAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T17:44:45.772Z"
+              "WhenOpened": "2026-08-07T17:44:45.772Z",
+              "EditorCaption": ""
             }
           ]
         }

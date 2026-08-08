@@ -110,8 +110,6 @@ namespace ScreenCrosshair
             SaveKeybind("MoveLeft", key => Settings.Default.MoveLeft = key);
             SaveKeybind("MoveRight", key => Settings.Default.MoveRight = key);
 
-            //Settings.Default.RefreshesPerSecond = CrosshairScreen.ActiveCrosshairScreen.RefreshesPerSecond;
-
             Settings.Default.Save();
         }
 

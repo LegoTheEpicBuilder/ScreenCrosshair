@@ -33,7 +33,7 @@ namespace ScreenCrosshair
             }
         }
 
-        private int _crosshairSize = Properties.Settings.Default.CrosshairSize;
+        private int _crosshairSize;
         public int CrosshairSize { 
             get { return _crosshairSize; }
             set
@@ -74,10 +74,9 @@ namespace ScreenCrosshair
         {
             base.OnLoad(e);
 
+            //setting up standard values for temporarily settings
+            _crosshairSize = Properties.Settings.Default.CrosshairSize;
             _refreshesPerSecond = 1000 / UpdateTimer.Interval;
-
-            Settings = new SettingsForm();
-            Settings.Dispose();
 
             //keybind manager initializing
             KeybindsManager = new KeybindsManager(this.Handle);
@@ -132,16 +131,19 @@ namespace ScreenCrosshair
             }
             else if (e.Keybind.KeyFunction.Equals("ToggleSettings")) 
             {
-                Debug.WriteLine(Settings.Visible);
-
-                if (Settings.IsDisposed) 
-                { 
+                if (Settings == null || Settings.IsDisposed)
+                {
                     Settings = new SettingsForm();
                     Settings.Show();
                 }
+                else if (Settings.Visible)
+                {
+                    Settings.Hide();
+                }
                 else
                 {
-                    Settings.Dispose();
+                    Settings.Show();
+                    Settings.Activate();
                 }
             }
         }
