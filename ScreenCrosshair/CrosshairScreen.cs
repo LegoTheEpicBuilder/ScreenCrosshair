@@ -9,6 +9,7 @@ using Utils;
 using System.Diagnostics;
 using Keybinds;
 using ScreenCrosshair.Crosshair;
+using System.Runtime.InteropServices;
 
 namespace ScreenCrosshair
 {
@@ -17,6 +18,8 @@ namespace ScreenCrosshair
         public static CrosshairScreen ActiveCrosshairScreen { get; private set; }
         public static KeybindsManager KeybindsManager { get; private set; }
         public static CrosshairManager CrosshairManager { get; private set; }
+        public static RegionReader RegionReader { get; private set; }
+
         public SettingsForm Settings { get; private set; }
 
         private int _refreshesPerSecond = Properties.Settings.Default.RefreshesPerSecond;
@@ -47,7 +50,7 @@ namespace ScreenCrosshair
         }
 
         private int _crosshairRepositionAmount = 2;
-        private int _colorPickingSize = 30;
+        private int _colorPickingSize = 40;
 
         public StandardCrosshair CrosshairDrawing { get; private set; }
         private Color _colorReversed;
@@ -58,6 +61,10 @@ namespace ScreenCrosshair
         private Timer UpdateTimer;
         private IContainer components;
         private const int WS_EX_TOPMOST = 0x8;
+
+        private const uint WDA_NONE = 0x00000000;
+        private const uint WDA_MONITOR = 0x00000001;
+        private const uint WDA_EXCLUDEFROMCAPTURE = 0x00000011;
 
         public CrosshairScreen()
         {
@@ -96,6 +103,9 @@ namespace ScreenCrosshair
             //crosshair drawing initializing
             CrosshairManager = new CrosshairManager();
             CrosshairManager.SetCrosshairByType((CrosshairType)Properties.Settings.Default.CrosshairType);
+
+            //region reader initializing
+            RegionReader = new RegionReader();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -163,10 +173,16 @@ namespace ScreenCrosshair
         }
 
         private void UpdateTimer_Tick(object sender, EventArgs e)
-        {            
-            Color color = Utilities.GetAverageColorRaw(new Rectangle(CrosshairManager.DrawingPosition.X - _colorPickingSize / 2, CrosshairManager.DrawingPosition.Y - _colorPickingSize / 2, _colorPickingSize, _colorPickingSize));
-            _colorReversed = Utilities.GetReverseBlackOrWhite(color);
-            //MessageBox.Show($"{color.ToString()}/n{colorReverse.ToString()}");
+        {
+            _colorPickingSize = (int)Math.Round(CrosshairManager.Size * 1.5);
+
+            Rectangle region = new Rectangle(CrosshairManager.DrawingPosition.X - _colorPickingSize / 2, CrosshairManager.DrawingPosition.Y - _colorPickingSize / 2, _colorPickingSize, _colorPickingSize);
+            Rectangle excludingRegion = new Rectangle(CrosshairManager.DrawingPosition.X - CrosshairManager.Size / 2, CrosshairManager.DrawingPosition.Y - CrosshairManager.Size / 2, CrosshairManager.Size, CrosshairManager.Size);
+
+            RegionReader.Region = region;
+            RegionReader.ExcludingRegion = excludingRegion;
+
+            _colorReversed = RegionReader.GetMostReadableColorOverRegion();
 
             Invalidate();
         }
@@ -188,6 +204,12 @@ namespace ScreenCrosshair
             int initialStyle = GetWindowLong(this.Handle, GWL_EXSTYLE);
             SetWindowLong(this.Handle, GWL_EXSTYLE, initialStyle | WS_EX_TRANSPARENT | WS_EX_TOPMOST);
 
+            if (!SetWindowDisplayAffinity(this.Handle, WDA_EXCLUDEFROMCAPTURE))
+            {
+                int error = Marshal.GetLastWin32Error();
+                Debug.WriteLine($"SetWindowDisplayAffinity failed: {error}");
+            }
+
             //no flickering
             this.DoubleBuffered = true;
 
@@ -200,7 +222,8 @@ namespace ScreenCrosshair
             CrosshairManager.Draw(e.Graphics);
 
             //debugging
-            //e.Graphics.DrawRectangle(Pens.Red, CrosshairDrawing.DrawingPosition.X - _colorPickingSize / 2, CrosshairDrawing.DrawingPosition.Y - _colorPickingSize / 2, _colorPickingSize, _colorPickingSize);
+            //e.Graphics.DrawRectangle(Pens.Red, RegionReader.Region);
+            //e.Graphics.DrawRectangle(Pens.Blue, RegionReader.ExcludingRegion);
         }
 
         protected override void OnShown(EventArgs e)
@@ -210,11 +233,14 @@ namespace ScreenCrosshair
             Invalidate();
         }
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        [DllImport("user32.dll")]
         private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        [DllImport("user32.dll")]
         private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+        
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern bool SetWindowDisplayAffinity(IntPtr hWnd, uint dwAffinity);
 
         private void InitializeComponent()
         {
@@ -231,7 +257,6 @@ namespace ScreenCrosshair
             this.ClientSize = new System.Drawing.Size(278, 244);
             this.Name = "CrosshairScreen";
             this.ResumeLayout(false);
-
         }
     }
 }

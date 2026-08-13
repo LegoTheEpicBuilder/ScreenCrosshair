@@ -21,14 +21,12 @@ namespace ScreenCrosshair.Crosshair
         public Point StartPosition { get { return new Point(Bounds.Left + Bounds.Width / 2, Bounds.Top + Bounds.Height / 2); } }
         public Point DrawingPosition { get; protected set; }
 
+
         private int _size = 16;
         public int Size
         {
             get { return _size; }
-            set
-            {
-                _size = value % 2 == 0 ? value : value + 1;
-            }
+            set { _size = value; }
         }
 
         public CrosshairManager()

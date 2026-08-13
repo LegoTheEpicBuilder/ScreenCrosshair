@@ -68,6 +68,7 @@
     <Compile Include="KeybindManager\KeyPressedEventArgs.cs" />
     <Compile Include="ModelBaseClass.cs" />
     <Compile Include="PresenterBaseClass.cs" />
+    <Compile Include="RegionReader.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
